@@ -1,10 +1,11 @@
 import { useState } from "react";
 import Modal from "react-modal";
 
-import { Header } from "components/Header";
-import { Dashboard } from "components/Dashboard";
-import { TransactionsTable } from "components/TransactionsTable";
-import { NewTransactionModal } from "components/NewTransactionModal";
+import { Header } from "./components/Header";
+import { Dashboard } from "./components/Dashboard";
+import { TransactionsTable } from "./components/TransactionsTable";
+import { NewTransactionModal } from "./components/NewTransactionModal";
+import { TransactionsProvider } from "./hooks/useTransactions";
 
 import { GlobalStyle } from "./styles/global";
 
@@ -22,7 +23,7 @@ function App() {
   }
 
   return (
-    <>
+    <TransactionsProvider>
       <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
       <Dashboard />
       <NewTransactionModal
@@ -31,7 +32,7 @@ function App() {
       />
       <TransactionsTable />
       <GlobalStyle />
-    </>
+    </TransactionsProvider>
   );
 }
 

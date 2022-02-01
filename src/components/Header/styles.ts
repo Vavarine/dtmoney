@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { rem } from "styles/mixins";
-import { theme } from "styles/theme";
+import { rem } from "../../styles/mixins";
+import { theme } from "../../styles/theme";
 
 export const Container = styled.header`
   padding: ${rem(32)} 10px ${rem(132)} 10px;

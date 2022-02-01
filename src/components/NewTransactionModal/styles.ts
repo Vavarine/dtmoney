@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { darken, transparentize } from "polished";
 
-import { theme } from "styles/theme";
-import { rem } from "styles/mixins";
+import { theme } from "../../styles/theme";
+import { rem } from "../../styles/mixins";
 
 export const Container = styled.form`
   display: flex;
